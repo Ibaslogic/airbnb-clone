@@ -8,6 +8,8 @@ import getListings, {
 import getCurrentUser from '@/app/actions/getCurrentUser';
 // import ClientOnly from "./components/ClientOnly";
 
+export const dynamic = 'force-dynamic';
+
 interface HomeProps {
   searchParams: IListingsParams;
 }
