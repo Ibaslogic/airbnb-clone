@@ -48,6 +48,8 @@ const ListingHead: React.FC<ListingHeadProps> = ({
           fill
           className="object-cover w-full"
           alt="Image"
+          sizes="(max-width: 768px) 50vw, 100vw"
+          priority
         />
         <div
           className="

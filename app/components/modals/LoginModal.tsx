@@ -1,6 +1,6 @@
 'use client';
 
-import axios from 'axios';
+// import axios from 'axios';
 import { signIn } from 'next-auth/react';
 import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
@@ -68,23 +68,26 @@ const LoginModal = () => {
         title="Welcome back"
         subtitle="Login to your account!"
       />
-      <Input
-        id="email"
-        label="Email"
-        disabled={isLoading}
-        register={register}
-        errors={errors}
-        required
-      />
-      <Input
-        id="password"
-        label="Password"
-        type="password"
-        disabled={isLoading}
-        register={register}
-        errors={errors}
-        required
-      />
+      <form className="flex flex-col gap-4">
+        <Input
+          id="email"
+          label="Email"
+          disabled={isLoading}
+          register={register}
+          errors={errors}
+          required
+        />
+        <Input
+          id="password"
+          label="Password"
+          type="password"
+          autoComplete="true"
+          disabled={isLoading}
+          register={register}
+          errors={errors}
+          required
+        />
+      </form>
     </div>
   );
 
